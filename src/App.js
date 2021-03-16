@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Mail from './Mail';
-import EmailList from './EmailList';
-import SendMail from './SendMail';
-import Login from './Login';
+import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
+import Mail from './components/EmailSection/MailDetails/Mail';
+import EmailList from './components/EmailSection/EmailList/EmailList';
+import SendMail from './components/EmailSection/MailPopup/SendMail';
+import Login from './components/Login/Login';
 import { auth } from './firebase'
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';

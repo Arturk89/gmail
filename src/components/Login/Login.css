@@ -11,5 +11,6 @@
 
 .login__container > img {
     object-fit: contain;
-    height: 200px;
+    height: 100px;
+    margin-bottom: 50px;
 }

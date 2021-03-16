@@ -1,10 +1,11 @@
 import React from 'react'
 import "./Header.css"
 
-import { Avatar, IconButton } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectUser, logout } from './features/userSlice';
-import { auth } from './firebase';
+import { selectUser, logout } from '../../features/userSlice';
+import { auth } from '../../firebase';
+
+import { Avatar, IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';

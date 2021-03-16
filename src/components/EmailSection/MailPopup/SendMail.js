@@ -3,14 +3,14 @@ import { useForm } from 'react-hook-form';
 import { Close } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
-import { closeSendMessage} from './features/mailSlice';
-import { db } from './firebase'
+import { closeSendMessage} from '../../../features/mailSlice';
+import { db } from '../../../firebase'
 import firebase from 'firebase'
 import "./SendMail.css";
 
 const SendMail = () => {
 
-    const { register, handleSubmit, watch, errors} = useForm();
+    const { register, handleSubmit, errors} = useForm();
     const dispatch = useDispatch();
 
     const onSubmit = (formData) => {

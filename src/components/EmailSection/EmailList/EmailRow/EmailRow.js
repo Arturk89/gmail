@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
-import { selectMail } from './features/mailSlice';
+import { selectMail } from '../../../../features/mailSlice';
 import { Checkbox, IconButton } from '@material-ui/core'
 import { LabelImportantOutlined, StarBorderOutlined } from '@material-ui/icons'
 import "./EmailRow.css"
