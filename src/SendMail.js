@@ -4,6 +4,8 @@ import { Close } from '@material-ui/icons';
 import { Button } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 import { closeSendMessage} from './features/mailSlice';
+import { db } from './firebase'
+import firebase from 'firebase'
 import "./SendMail.css";
 
 const SendMail = () => {
@@ -12,7 +14,14 @@ const SendMail = () => {
     const dispatch = useDispatch();
 
     const onSubmit = (formData) => {
- 
+        db.collection('emails').add({
+            to: formData.to,
+            subject: formData.subject,
+            message: formData.message,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+
+        dispatch(closeSendMessage());
     }
 
     return (
